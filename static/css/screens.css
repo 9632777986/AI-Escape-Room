@@ -1,0 +1,30 @@
+/* Helper classes used by the cinematic, title, briefing and ending screens. */
+.s-hide{opacity:0!important;pointer-events:none!important}
+.s-black{position:absolute;inset:0;background:#000;opacity:0;z-index:9;pointer-events:none;transition:opacity .6s}
+.s-black.on{opacity:1}
+.s-out{opacity:0;transition:opacity .45s}
+.c-line,.c-who{transition:opacity .45s}
+.s-withp{left:30%;right:8%;align-items:flex-start;text-align:left}
+.s-flash{position:absolute;inset:0;background:#fff;z-index:8;pointer-events:none;animation:sflash .7s forwards}
+@keyframes sflash{from{opacity:.75}to{opacity:0}}
+.s-rain{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.s-pulse{animation:spulse 2s infinite}
+@keyframes spulse{50%{filter:brightness(1.25) drop-shadow(0 0 1.2rem rgba(118,185,0,.6))}}
+.s-hide-until{opacity:0;transform:translateY(.6rem);transition:.6s}
+.s-hide-until.s-in{opacity:1;transform:none}
+.s-clock{position:absolute;right:2rem;bottom:1.6rem;font-family:var(--mono);font-weight:600;font-size:2.4rem;color:var(--red);letter-spacing:.08em;text-shadow:0 0 1rem rgba(255,82,82,.5)}
+.s-note{margin-top:1.4rem;padding:.7rem .9rem;font-size:.74rem;line-height:1.5;color:#d9c7a4;background:rgba(0,0,0,.25);display:flex;gap:.6rem;align-items:flex-start}
+.s-note b{color:#ffd28a}
+.s-fadein{animation:fin .9s both}
+.s-tick{opacity:.0;animation:fin .5s forwards}
+.s-tick:nth-of-type(1){animation-delay:.9s}.s-tick:nth-of-type(2){animation-delay:1.6s}.s-tick:nth-of-type(3){animation-delay:2.3s}.s-tick:nth-of-type(4){animation-delay:3s}
+.s-v{color:var(--g2);font-weight:600}
+.s-newsbg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.5) saturate(1.1)}
+.s-newsdim{position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.85),transparent 60%)}
+.s-newskip{position:absolute;right:2rem;top:1.4rem;z-index:6}
+.s-failcard{width:46rem;text-align:center;padding:2.2rem 2.6rem;background:rgba(6,9,12,.92);box-shadow:0 0 0 1px rgba(255,82,82,.45),0 2rem 6rem #000;max-height:94%;overflow:auto}
+.s-failtitle{font-family:var(--hd);font-weight:800;font-size:4.2rem;letter-spacing:.08em;color:var(--red);text-shadow:0 0 2rem rgba(255,82,82,.5);line-height:1}
+.s-lessons{list-style:none;margin-top:.6rem;text-align:left;display:inline-block}
+.s-lessons li{font-size:.8rem;padding:.25rem 0;color:#d5e3e6;opacity:0;animation:rise .6s forwards}
+.s-lessons li::before{content:"› ";color:var(--g2)}
+.s-failbtns{margin-top:1.2rem;display:flex;gap:.8rem;justify-content:center}

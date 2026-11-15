@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>NVIDIA: THE FALL - The CEO's Last Chance</title>
+<meta name="description" content="A fictional cinematic corporate cyber-thriller escape room. All events, accounts and devices are invented.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2305090c'/%3E%3Cpath d='M6 16 L16 7 L26 16 L16 25 Z' fill='none' stroke='%2376b900' stroke-width='3'/%3E%3C/svg%3E">
+<!-- All paths are relative so the game also works behind Colab's port proxy. Fonts are self-hosted. -->
+<link rel="stylesheet" href="static/css/fonts.css">
+<link rel="stylesheet" href="static/css/game.css">
+<link rel="stylesheet" href="static/css/screens.css">
+<link rel="stylesheet" href="static/css/apps.css">
+<link rel="stylesheet" href="static/css/views.css">
+</head>
+<body>
+<div id="game">
+  <div id="stage">
+    <section id="screen-loading" class="screen on">
+      <div class="load-wrap">
+        <div class="load-mark"><svg viewBox="0 0 64 64"><path d="M10 32 L32 10 L54 32 L32 54 Z" fill="none" stroke="currentColor" stroke-width="3"/><path d="M22 32 L32 22 L42 32 L32 42 Z" fill="currentColor"/></svg></div>
+        <div class="load-title">THE FALL</div>
+        <div class="load-line" id="load-line">INITIALISING CASE FILE</div>
+        <div class="load-bar"><i id="load-bar"></i></div>
+        <div class="load-sub">fictional simulation  /  all events invented</div>
+      </div>
+    </section>
+    <section id="screen-title" class="screen"></section>
+    <section id="screen-cine" class="screen"></section>
+    <section id="screen-brief" class="screen"></section>
+    <section id="screen-room" class="screen">
+      <div id="scene"><img id="scene-bg" alt=""><div id="hotspots"></div></div>
+      <canvas id="dust"></canvas>
+      <div id="hud"></div>
+    </section>
+    <section id="screen-end" class="screen"></section>
+
+    <div id="app" class="overlay"></div>
+    <div id="panel" class="overlay"></div>
+    <div id="modal" class="overlay"></div>
+    <div id="pickups"></div>
+    <div id="toasts"></div>
+    <div id="fx"><div class="vig"></div><div class="grain"></div><div class="scan"></div><div id="fade"></div></div>
+  </div>
+</div>
+<div id="rotate"><div><b>Rotate your device</b><br>This game is played in landscape.</div></div>
+<noscript><p style="color:#fff;padding:2rem">This game needs JavaScript.</p></noscript>
+<script type="module" src="static/js/main.js"></script>
+</body>
+</html>
